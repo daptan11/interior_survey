@@ -1,0 +1,1125 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>沖繩五日｜家族旅行手冊</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700&family=Noto+Serif+TC:wght@400;500;600;700&family=Noto+Sans+TC:wght@300;400;500;700&family=Klee+One:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #f4efe6;
+    --paper-deep: #ebe3d3;
+    --paper-warm: #faf6ee;
+    --ink: #2b2825;
+    --ink-soft: #4a453e;
+    --ink-light: #7a7269;
+    --vermilion: #c4452d;
+    --vermilion-deep: #9a3322;
+    --matcha: #6b8e4e;
+    --gold: #b8923a;
+    --rule: rgba(43, 40, 37, 0.15);
+    --rule-soft: rgba(43, 40, 37, 0.08);
+    --font-jp: 'Shippori Mincho', 'Noto Serif TC', serif;
+    --font-zh: 'Noto Serif TC', serif;
+    --font-hand: 'Klee One', 'Noto Serif TC', serif;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: var(--font-zh);
+    background: var(--paper);
+    color: var(--ink);
+    line-height: 1.75;
+    font-size: 15px;
+    overflow-x: hidden;
+    background-image:
+      radial-gradient(circle at 20% 10%, rgba(196, 69, 45, 0.04) 0%, transparent 40%),
+      radial-gradient(circle at 80% 80%, rgba(44, 62, 80, 0.04) 0%, transparent 40%);
+  }
+
+  .paper-grain {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    pointer-events: none;
+    z-index: 1;
+    opacity: 0.4;
+    background-image:
+      repeating-linear-gradient(0deg, transparent 0, transparent 2px, rgba(43,40,37,0.015) 2px, rgba(43,40,37,0.015) 3px),
+      repeating-linear-gradient(90deg, transparent 0, transparent 2px, rgba(43,40,37,0.015) 2px, rgba(43,40,37,0.015) 3px);
+  }
+
+  .container {
+    max-width: 480px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+  }
+
+  .cover {
+    min-height: 100vh;
+    background: var(--paper);
+    position: relative;
+    padding: 48px 32px 60px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  .cover::before {
+    content: '';
+    position: absolute;
+    inset: 16px;
+    border: 1px solid rgba(43, 40, 37, 0.2);
+    pointer-events: none;
+  }
+
+  .cover-top {
+    text-align: center;
+    padding-top: 28px;
+    position: relative;
+    z-index: 2;
+  }
+
+  .cover-stamp {
+    display: inline-block;
+    padding: 6px 14px;
+    border: 1px solid var(--vermilion);
+    color: var(--vermilion);
+    font-family: var(--font-jp);
+    font-size: 11px;
+    letter-spacing: 4px;
+    margin-bottom: 24px;
+    transform: rotate(-2deg);
+  }
+
+  .cover-jp {
+    font-family: var(--font-jp);
+    font-size: 13px;
+    color: var(--ink-light);
+    letter-spacing: 6px;
+    margin-bottom: 16px;
+  }
+
+  .cover-title {
+    font-family: var(--font-jp);
+    font-size: 56px;
+    font-weight: 600;
+    color: var(--ink);
+    line-height: 1.1;
+    margin-bottom: 12px;
+    letter-spacing: 2px;
+  }
+
+  .cover-title .small {
+    display: block;
+    font-size: 22px;
+    margin-top: 8px;
+    color: var(--vermilion);
+    letter-spacing: 8px;
+  }
+
+  .cover-sub {
+    font-size: 13px;
+    color: var(--ink-soft);
+    letter-spacing: 3px;
+    margin-top: 18px;
+  }
+
+  .cover-img {
+    margin: 28px 0 24px;
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+    position: relative;
+    z-index: 2;
+    border: 1px solid var(--rule);
+  }
+
+  .cover-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: saturate(0.92) contrast(0.97);
+  }
+
+  .cover-bottom {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    margin-top: auto;
+  }
+
+  .cover-meta {
+    background: rgba(250, 246, 238, 0.92);
+    backdrop-filter: blur(4px);
+    padding: 20px 24px;
+    border: 0.5px solid var(--rule);
+    margin: 0 8px;
+  }
+
+  .cover-meta-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 0;
+    border-bottom: 0.5px dashed var(--rule);
+    font-size: 13px;
+  }
+
+  .cover-meta-row:last-child { border-bottom: none; }
+
+  .cover-meta-label {
+    font-family: var(--font-jp);
+    color: var(--ink-light);
+    letter-spacing: 2px;
+  }
+
+  .cover-meta-value {
+    color: var(--ink);
+    font-weight: 500;
+  }
+
+  .cover-family {
+    margin-top: 24px;
+    font-family: var(--font-hand);
+    font-size: 14px;
+    color: var(--ink-soft);
+    letter-spacing: 1px;
+  }
+
+  .section-divider {
+    text-align: center;
+    padding: 60px 0 40px;
+    position: relative;
+  }
+
+  .section-divider::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 32px;
+    right: 32px;
+    height: 1px;
+    background: var(--rule);
+  }
+
+  .section-divider span {
+    background: var(--paper);
+    padding: 0 20px;
+    font-family: var(--font-jp);
+    font-size: 13px;
+    letter-spacing: 8px;
+    color: var(--ink-light);
+    position: relative;
+    z-index: 1;
+  }
+
+  .overview { padding: 0 32px 40px; }
+
+  .overview-card {
+    background: var(--paper-warm);
+    border: 0.5px solid var(--rule);
+    padding: 28px 24px;
+    position: relative;
+  }
+
+  .overview-card::before {
+    content: '旅程';
+    position: absolute;
+    top: -10px;
+    left: 24px;
+    background: var(--vermilion);
+    color: var(--paper-warm);
+    font-family: var(--font-jp);
+    font-size: 11px;
+    letter-spacing: 3px;
+    padding: 2px 10px;
+  }
+
+  .overview-day {
+    display: grid;
+    grid-template-columns: 60px 1fr;
+    gap: 14px;
+    padding: 14px 0;
+    border-bottom: 1px dashed var(--rule);
+    align-items: start;
+  }
+
+  .overview-day:last-child { border-bottom: none; }
+
+  .overview-day-num {
+    font-family: var(--font-jp);
+    font-size: 11px;
+    color: var(--ink-light);
+    letter-spacing: 2px;
+  }
+
+  .overview-day-num strong {
+    display: block;
+    font-size: 22px;
+    color: var(--vermilion);
+    font-weight: 500;
+    margin-top: 2px;
+    letter-spacing: 0;
+  }
+
+  .overview-day-title {
+    font-size: 14px;
+    color: var(--ink);
+    font-weight: 500;
+    margin-bottom: 4px;
+  }
+
+  .overview-day-desc {
+    font-size: 12px;
+    color: var(--ink-light);
+    line-height: 1.6;
+  }
+
+  .day-section { padding: 0 0 60px; }
+
+  .day-header {
+    background: var(--ink);
+    color: var(--paper-warm);
+    padding: 36px 32px 32px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .day-header::before {
+    content: '';
+    position: absolute;
+    top: 0; right: 0;
+    width: 140px;
+    height: 140px;
+    background: var(--vermilion);
+    opacity: 0.12;
+    border-radius: 50%;
+    transform: translate(40px, -40px);
+  }
+
+  .day-header-row {
+    display: flex;
+    align-items: baseline;
+    gap: 16px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .day-num-big {
+    font-family: var(--font-jp);
+    font-size: 12px;
+    color: rgba(250, 246, 238, 0.6);
+    letter-spacing: 3px;
+  }
+
+  .day-num-big strong {
+    display: block;
+    font-size: 64px;
+    color: var(--paper-warm);
+    font-weight: 400;
+    line-height: 1;
+    letter-spacing: -2px;
+    margin-top: 4px;
+  }
+
+  .day-header-info {
+    flex: 1;
+    padding-bottom: 4px;
+  }
+
+  .day-date {
+    font-family: var(--font-jp);
+    font-size: 12px;
+    color: rgba(250, 246, 238, 0.7);
+    letter-spacing: 2px;
+    margin-bottom: 6px;
+  }
+
+  .day-title {
+    font-family: var(--font-jp);
+    font-size: 20px;
+    color: var(--paper-warm);
+    font-weight: 500;
+    line-height: 1.4;
+    letter-spacing: 1px;
+  }
+
+  .day-tagline {
+    margin-top: 16px;
+    padding-top: 16px;
+    border-top: 0.5px solid rgba(250, 246, 238, 0.15);
+    font-size: 12px;
+    color: rgba(250, 246, 238, 0.7);
+    line-height: 1.7;
+    position: relative;
+    z-index: 1;
+  }
+
+  .map-hint {
+    background: var(--paper-deep);
+    padding: 16px 24px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border-bottom: 0.5px solid var(--rule);
+  }
+
+  .map-hint-icon {
+    width: 28px;
+    height: 28px;
+    flex-shrink: 0;
+  }
+
+  .map-hint-text {
+    font-size: 12px;
+    color: var(--ink-soft);
+    line-height: 1.5;
+  }
+
+  .map-hint-text strong {
+    display: block;
+    font-family: var(--font-jp);
+    color: var(--ink);
+    font-weight: 500;
+    margin-bottom: 2px;
+  }
+
+  .timeline {
+    padding: 32px 24px 0;
+    position: relative;
+  }
+
+  .tl-item {
+    display: grid;
+    grid-template-columns: 56px 1fr;
+    gap: 14px;
+    margin-bottom: 32px;
+    position: relative;
+  }
+
+  .tl-time {
+    text-align: right;
+    padding-top: 4px;
+  }
+
+  .tl-time-jp {
+    font-family: var(--font-jp);
+    font-size: 10px;
+    color: var(--ink-light);
+    letter-spacing: 2px;
+  }
+
+  .tl-time-num {
+    font-family: var(--font-jp);
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--vermilion);
+    line-height: 1.2;
+    margin-top: 2px;
+  }
+
+  .tl-content {
+    border-left: 1px solid var(--rule);
+    padding-left: 16px;
+    padding-bottom: 8px;
+    position: relative;
+  }
+
+  .tl-content::before {
+    content: '';
+    position: absolute;
+    left: -4px;
+    top: 8px;
+    width: 7px;
+    height: 7px;
+    background: var(--vermilion);
+    border-radius: 50%;
+    border: 1.5px solid var(--paper);
+    box-shadow: 0 0 0 1px var(--vermilion);
+  }
+
+  .tl-label {
+    font-family: var(--font-jp);
+    font-size: 10px;
+    color: var(--vermilion-deep);
+    letter-spacing: 3px;
+    margin-bottom: 4px;
+  }
+
+  .tl-title {
+    font-family: var(--font-jp);
+    font-size: 17px;
+    font-weight: 500;
+    color: var(--ink);
+    line-height: 1.4;
+    margin-bottom: 6px;
+  }
+
+  .tl-desc {
+    font-size: 13px;
+    color: var(--ink-soft);
+    line-height: 1.7;
+    margin-bottom: 12px;
+  }
+
+  .photo {
+    margin: 14px 0 12px;
+    overflow: hidden;
+    position: relative;
+    aspect-ratio: 4 / 3;
+    background: var(--paper-deep);
+    border: 0.5px solid var(--rule);
+  }
+
+  .photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    filter: saturate(0.92) contrast(0.98);
+  }
+
+  .photo-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 18px 14px 10px;
+    background: linear-gradient(180deg, transparent 0%, rgba(0,0,0,0.6) 100%);
+    color: rgba(255,255,255,0.95);
+    font-family: var(--font-jp);
+    font-size: 11px;
+    letter-spacing: 2px;
+  }
+
+  .photo-tall { aspect-ratio: 3 / 4; }
+  .photo-wide { aspect-ratio: 16 / 9; }
+
+  .info-card {
+    background: var(--paper-warm);
+    border: 0.5px solid var(--rule);
+    padding: 14px 16px;
+    margin-top: 12px;
+    font-size: 12px;
+    position: relative;
+  }
+
+  .info-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 3px;
+    height: 100%;
+    background: var(--matcha);
+  }
+
+  .info-row {
+    display: grid;
+    grid-template-columns: 56px 1fr;
+    gap: 8px;
+    padding: 4px 0;
+    align-items: start;
+  }
+
+  .info-label {
+    font-family: var(--font-jp);
+    color: var(--ink-light);
+    font-size: 10px;
+    letter-spacing: 2px;
+    padding-top: 2px;
+  }
+
+  .info-value {
+    color: var(--ink);
+    font-size: 12px;
+    line-height: 1.6;
+  }
+
+  .info-value .tag {
+    display: inline-block;
+    background: var(--paper-deep);
+    color: var(--ink-soft);
+    padding: 1px 6px;
+    margin-right: 4px;
+    margin-bottom: 2px;
+    font-size: 10px;
+    border-radius: 2px;
+  }
+
+  .note {
+    background: rgba(196, 69, 45, 0.06);
+    border-left: 3px solid var(--vermilion);
+    padding: 10px 14px;
+    margin: 12px 0;
+    font-size: 12px;
+    color: var(--ink-soft);
+    line-height: 1.6;
+  }
+
+  .note strong {
+    font-family: var(--font-jp);
+    color: var(--vermilion-deep);
+    letter-spacing: 1px;
+    display: block;
+    margin-bottom: 2px;
+    font-weight: 500;
+  }
+
+  .meal-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-family: var(--font-jp);
+    font-size: 10px;
+    letter-spacing: 3px;
+    color: var(--ink-light);
+    margin-bottom: 10px;
+    padding: 3px 10px;
+    background: var(--paper-deep);
+    border-radius: 2px;
+  }
+
+  .ending {
+    padding: 80px 32px 60px;
+    text-align: center;
+    background: var(--ink);
+    color: var(--paper-warm);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .ending::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background:
+      radial-gradient(circle at 20% 30%, rgba(196, 69, 45, 0.15) 0%, transparent 40%),
+      radial-gradient(circle at 80% 70%, rgba(184, 146, 58, 0.1) 0%, transparent 40%);
+  }
+
+  .ending-content {
+    position: relative;
+    z-index: 1;
+  }
+
+  .ending-jp {
+    font-family: var(--font-jp);
+    font-size: 13px;
+    letter-spacing: 6px;
+    color: rgba(250, 246, 238, 0.5);
+    margin-bottom: 16px;
+  }
+
+  .ending-title {
+    font-family: var(--font-jp);
+    font-size: 28px;
+    font-weight: 500;
+    margin-bottom: 12px;
+    letter-spacing: 4px;
+  }
+
+  .ending-text {
+    font-family: var(--font-hand);
+    font-size: 14px;
+    color: rgba(250, 246, 238, 0.75);
+    line-height: 1.9;
+    max-width: 280px;
+    margin: 24px auto 0;
+  }
+
+  .ending-stamp {
+    display: inline-block;
+    margin-top: 32px;
+    padding: 12px 16px;
+    border: 1px solid rgba(250, 246, 238, 0.3);
+    font-family: var(--font-jp);
+    font-size: 11px;
+    letter-spacing: 4px;
+    color: rgba(250, 246, 238, 0.7);
+  }
+
+  .day1 .day-num-big strong { color: #f4c4a8; }
+  .day2 .day-num-big strong { color: #c4d4a8; }
+  .day3 .day-num-big strong { color: #a8c4d4; }
+  .day4 .day-num-big strong { color: #d4a8c4; }
+  .day5 .day-num-big strong { color: #d4c4a8; }
+</style>
+</head>
+<body>
+<div class="paper-grain"></div>
+
+<div class="container">
+
+  <section class="cover">
+    <div class="cover-top">
+      <div class="cover-stamp">家族旅行</div>
+      <div class="cover-jp">おきなわ・五日間の旅</div>
+      <h1 class="cover-title">
+        沖繩
+        <span class="small">OKINAWA 2026</span>
+      </h1>
+      <div class="cover-sub">— 海風 ・ 古城 ・ 美食 —</div>
+    </div>
+
+    <div class="cover-img">
+      <img src="https://images.unsplash.com/photo-1645610115316-dc38e31a1e9b?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="沖繩海岸景觀" loading="lazy">
+    </div>
+
+    <div class="cover-bottom">
+      <div class="cover-meta">
+        <div class="cover-meta-row">
+          <span class="cover-meta-label">期 間</span>
+          <span class="cover-meta-value">4/29 — 5/3</span>
+        </div>
+        <div class="cover-meta-row">
+          <span class="cover-meta-label">日 數</span>
+          <span class="cover-meta-value">5 天 4 夜</span>
+        </div>
+        <div class="cover-meta-row">
+          <span class="cover-meta-label">航 班</span>
+          <span class="cover-meta-value">17:20 抵達 ・ 18:20 返程</span>
+        </div>
+        <div class="cover-meta-row">
+          <span class="cover-meta-label">同 行</span>
+          <span class="cover-meta-value">爸爸 ・ 媽媽 ・ 妹妹</span>
+        </div>
+      </div>
+      <div class="cover-family">— 願這趟旅程，留下溫暖的回憶 —</div>
+    </div>
+  </section>
+
+  <div class="section-divider"><span>行 程 概 要</span></div>
+
+  <section class="overview">
+    <div class="overview-card">
+      <div class="overview-day">
+        <div class="overview-day-num">DAY<strong>01</strong></div>
+        <div>
+          <div class="overview-day-title">那霸微醺之夜</div>
+          <div class="overview-day-desc">抵達 → 壺屋 → 國際通 → 居酒屋</div>
+        </div>
+      </div>
+      <div class="overview-day">
+        <div class="overview-day-num">DAY<strong>02</strong></div>
+        <div>
+          <div class="overview-day-title">南部自駕探險</div>
+          <div class="overview-day-desc">JEF 漢堡 → 玉泉洞 → 讀谷村</div>
+        </div>
+      </div>
+      <div class="overview-day">
+        <div class="overview-day-num">DAY<strong>03</strong></div>
+        <div>
+          <div class="overview-day-title">北部海洋與美食</div>
+          <div class="overview-day-desc">青之洞窟 → 古宇利島 → 阿古豬</div>
+        </div>
+      </div>
+      <div class="overview-day">
+        <div class="overview-day-num">DAY<strong>04</strong></div>
+        <div>
+          <div class="overview-day-title">中部海灘耍廢</div>
+          <div class="overview-day-desc">港川 → Tropical Beach → 美國村</div>
+        </div>
+      </div>
+      <div class="overview-day">
+        <div class="overview-day-num">DAY<strong>05</strong></div>
+        <div>
+          <div class="overview-day-title">那霸滿載而歸</div>
+          <div class="overview-day-desc">波上宮 → LITOR → 博物館 → 機場</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="day-section day1">
+    <div class="section-divider"><span>第 一 日</span></div>
+
+    <header class="day-header">
+      <div class="day-header-row">
+        <div class="day-num-big">DAY<strong>01</strong></div>
+        <div class="day-header-info">
+          <div class="day-date">4 月 29 日 ・ 水曜日</div>
+          <div class="day-title">抵達沖繩<br>那霸微醺之夜</div>
+        </div>
+      </div>
+      <p class="day-tagline">飛機落地的那一刻，假期就開始了。先放下行李，到松尾老街吃道地家常菜，再到國際通慢慢走，第一天就用一杯泡盛收尾。</p>
+    </header>
+
+    <div class="map-hint">
+      <svg class="map-hint-icon" viewBox="0 0 24 24" fill="none" stroke="#4a453e" stroke-width="1.5">
+        <path d="M12 21s-7-7.5-7-12a7 7 0 1114 0c0 4.5-7 12-7 12z"/>
+        <circle cx="12" cy="9" r="2.5"/>
+      </svg>
+      <div class="map-hint-text">
+        <strong>移動範圍 ・ 那霸市區</strong>
+        松尾 — 牧志 — 安里，皆步行可達
+      </div>
+    </div>
+
+    <div class="timeline">
+
+      <div class="tl-item">
+        <div class="tl-time">
+          <div class="tl-time-jp">到 着</div>
+          <div class="tl-time-num">17:20</div>
+        </div>
+        <div class="tl-content">
+          <div class="tl-label">ARRIVAL</div>
+          <h3 class="tl-title">抵達那霸機場</h3>
+          <p class="tl-desc">領完行李、搭單軌電車進市區，前往壺屋飯店辦理 Check-in，把行李放下後輕裝出門。</p>
+          <div class="photo">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a4/Naha_Airport12s3s4350.jpg" alt="那霸機場" loading="lazy">
+            <div class="photo-caption">那覇空港 ・ NAHA AIRPORT</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-time">
+          <div class="tl-time-jp">夕 食</div>
+          <div class="tl-time-num">19:00</div>
+        </div>
+        <div class="tl-content">
+          <div class="meal-tag">DINNER ・ 晩ごはん</div>
+          <h3 class="tl-title">鄉土料理 ここ</h3>
+          <p class="tl-desc">藏身松尾巷弄的小店，賣的是真正的沖繩家常菜——海葡萄、苦瓜炒蛋、軟骨ソーキ，配一杯泡盛剛剛好。</p>
+          <div class="photo">
+            <img src="https://i.autoreserve.com/thumb/800x800/restaurant_image/image/058/627/032/58627032/49e71174-3bb2-4e28-9425-37f7cb06f4c1.jpeg?format=webp&w=800&auto=format&fit=crop" alt="沖繩家常菜" loading="lazy">
+            <div class="photo-caption">沖縄家庭料理 ・ 鄉土の味</div>
+          </div>
+          <div class="info-card">
+            <div class="info-row">
+              <span class="info-label">所 在</span>
+              <span class="info-value">那霸市 ・ 松尾</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">時 間</span>
+              <span class="info-value">營業至 00:00</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">必 點</span>
+              <span class="info-value"><span class="tag">沖繩家常菜</span><span class="tag">泡盛</span></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-time">
+          <div class="tl-time-jp">夜 散 歩</div>
+          <div class="tl-time-num">21:00</div>
+        </div>
+        <div class="tl-content">
+          <div class="tl-label">NIGHT WALK</div>
+          <h3 class="tl-title">國際通 ・ 唐吉訶德</h3>
+          <p class="tl-desc">沖繩最熱鬧的一條街，1.6 公里長的商店街從黃昏熱鬧到深夜。先逛逛紀念品店，再到唐吉訶德把零食、面膜、藥妝一次掃齊。</p>
+          <div class="photo">
+            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjNZAFR5HBIqQMxncyHO6_cXYCHA0Oc5WJJK5Ble-UJFtOFO2plxooc-J9w-VGljVpFJcQHowSbD8Djs-x7gUUdX5RRDn3R4YO0cFTXBmpz_yCcXt_2GgNwlPJXfh7f1plUyuUjp15GP34NWLaNlgvFEKEOjH6B3TTUzmupaOShrSwnYfU0wzY_nlnh-g/s1600-rw/%E6%B2%96%E7%B9%A9-%E6%99%AF%E9%BB%9E-%E6%8E%A8%E8%96%A6-%E5%9C%8B%E9%9A%9B%E9%80%9A-%E9%82%A3%E9%9C%B8-%E9%80%9B%E8%A1%97-%E8%B3%BC%E7%89%A9-%E8%87%AA%E7%94%B1%E8%A1%8C-%E6%97%85%E9%81%8A-Okinawa-attraction-Kokusaidori-shopping-Naha-Toruist-destination-2.JPG&w=800&auto=format&fit=crop" alt="國際通" loading="lazy">
+            <div class="photo-caption">国際通り ・ KOKUSAI STREET</div>
+          </div>
+          <div class="note">
+            <strong>採買清單</strong>
+            紅薯撻、雪鹽巧克力、海葡萄、泡盛迷你瓶、面膜——這幾樣是熱門伴手禮的常勝軍。
+          </div>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-time">
+          <div class="tl-time-jp">夜 食</div>
+          <div class="tl-time-num">23:00</div>
+        </div>
+        <div class="tl-content">
+          <div class="meal-tag">LATE NIGHT ・ 二軒目</div>
+          <h3 class="tl-title">彌榮 ・ 居酒屋</h3>
+          <p class="tl-desc">安里站附近的小居酒屋，氛圍極佳。木質吧台、暖黃燈光、輕柔的爵士樂——第一天放鬆喝一杯，是給旅程最好的開場。</p>
+           <div class="photo">
+            <img src="https://tblg.k-img.com/resize/660x370c/restaurant/images/Rvw/291881/fac11d2c5943271f56e7ba7ba88ec1b7.jpg?token=08977da&api=v2" alt="沖繩縣立博物館" loading="lazy">
+            <div class="photo-caption">島中華 彌榮</div>
+          <div class="info-card">
+            <div class="info-row">
+              <span class="info-label">所 在</span>
+              <span class="info-value">那霸市 ・ 安里</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">時 間</span>
+              <span class="info-value">營業至 02:00</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">氛 圍</span>
+              <span class="info-value"><span class="tag">深夜酒場</span><span class="tag">私房景點</span></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="day-section day2">
+    <div class="section-divider"><span>第 二 日</span></div>
+
+    <header class="day-header">
+      <div class="day-header-row">
+        <div class="day-num-big">DAY<strong>02</strong></div>
+        <div class="day-header-info">
+          <div class="day-date">4 月 30 日 ・ 木曜日</div>
+          <div class="day-title">壺屋早晨<br>南部自駕探險</div>
+        </div>
+      </div>
+      <p class="day-tagline">早晨在飯店附近的 JEF 吃苦瓜漢堡開啟一天，然後取車南下，到 COSTCO 採買、鑽進玉泉洞，最後驅車北上讀谷村，正式進入度假模式。</p>
+    </header>
+
+    <div class="map-hint">
+      <svg class="map-hint-icon" viewBox="0 0 24 24" fill="none" stroke="#4a453e" stroke-width="1.5">
+        <path d="M5 12h14M12 5l7 7-7 7"/>
+      </svg>
+      <div class="map-hint-text">
+        <strong>移動方式 ・ 自駕南下後北上</strong>
+        那霸 → 南城市 → 讀谷村 ・ 約 90 km
+      </div>
+    </div>
+
+    <div class="timeline">
+
+      <div class="tl-item">
+        <div class="tl-time">
+          <div class="tl-time-jp">朝 食</div>
+          <div class="tl-time-num">09:00</div>
+        </div>
+        <div class="tl-content">
+          <div class="meal-tag">BREAKFAST ・ 朝ごはん</div>
+          <h3 class="tl-title">JEF 漢堡 ・ 壺屋店</h3>
+          <p class="tl-desc">沖繩在地速食連鎖，最招牌的就是「ぬーやるバーガー」苦瓜漢堡——苦瓜、雞蛋、午餐肉夾在鬆軟麵包裡，是只有沖繩才吃得到的一味。</p>
+          <div class="photo">
+            <img src="https://feeljapan.net/okinawa-zhhk/wp-content/uploads/sites/6/JEFBurger.jpeg" alt="沖繩限定漢堡" loading="lazy">
+            <div class="photo-caption">沖縄限定 ・ 苦瓜漢堡風味</div>
+          </div>
+          <div class="info-card">
+            <div class="info-row">
+              <span class="info-label">所 在</span>
+              <span class="info-value">壺屋 ・ 步行可達飯店</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">時 間</span>
+              <span class="info-value">09:00 開始營業</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">必 點</span>
+              <span class="info-value"><span class="tag">苦瓜漢堡</span><span class="tag">沖繩限定</span></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-time">
+          <div class="tl-time-jp">出 発</div>
+          <div class="tl-time-num">10:00</div>
+        </div>
+        <div class="tl-content">
+          <div class="tl-label">CAR PICKUP</div>
+          <h3 class="tl-title">機場附近取車</h3>
+          <p class="tl-desc">領車、設定 GPS、確認保險條款。沖繩開車靠左行駛，方向盤在右邊，前 30 分鐘慢慢適應。</p>
+          
+          <div class="note">
+            <strong>注意</strong>
+            記得帶國際駕照與台灣駕照正本，兩者缺一不可。
+          </div>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-time">
+          <div class="tl-time-jp">午 後</div>
+          <div class="tl-time-num">14:30</div>
+        </div>
+        <div class="tl-content">
+          <div class="tl-label">SIGHTSEEING</div>
+          <h3 class="tl-title">玉泉洞</h3>
+          <p class="tl-desc">全長 5 公里、號稱東洋第一的鐘乳石洞，目前開放參觀的是 890 公尺，洞內常年保持 21 度，沿著步道走，看 30 萬年雕琢出的奇景。</p>
+          <div class="photo">
+            <img src="https://s3-ap-northeast-1.amazonaws.com/thegate/2021/02/09/17/54/05/gyokusen_do.jpg" alt="玉泉洞鐘乳石" loading="lazy">
+            <div class="photo-caption">玉泉洞 ・ GYOKUSENDO</div>
+          </div>
+          <div class="info-card">
+            <div class="info-row">
+              <span class="info-label">所 在</span>
+              <span class="info-value">南城市 ・ 文化王國內</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">時 間</span>
+              <span class="info-value">09:00 - 17:30 ・ 無需預約</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">建 議</span>
+              <span class="info-value"><span class="tag">穿好走的鞋</span><span class="tag">會有點滑</span></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="day-section day3">
+    <div class="section-divider"><span>第 三 日</span></div>
+
+    <header class="day-header">
+      <div class="day-header-row">
+        <div class="day-num-big">DAY<strong>03</strong></div>
+        <div class="day-header-info">
+          <div class="day-date">5 月 1 日 ・ 金曜日</div>
+          <div class="day-title">北部海洋<br>美食巡禮之日</div>
+        </div>
+      </div>
+      <p class="day-tagline">今天是大移動的一天——上午潛入青之洞窟看那片夢幻的藍，中午吃一碗北部最美的沖繩麵，下午看海，晚上吃阿古豬。</p>
+    </header>
+
+    <div class="timeline">
+
+      <div class="tl-item">
+        <div class="tl-time">
+          <div class="tl-time-jp">朝</div>
+          <div class="tl-time-num">09:00</div>
+        </div>
+        <div class="tl-content">
+          <div class="tl-label">SNORKELING</div>
+          <h3 class="tl-title">青之洞窟 ・ 浮潛</h3>
+          <p class="tl-desc">陽光從洞口折射進海水，洞內呈現夢幻的螢光藍。建議預約上午梯次，水質最清澈。</p>
+          <div class="photo photo-wide">
+            <img src="https://res.klook.com/images/fl_lossy.progressive,q_65/c_fill,w_1295,h_863/w_80,x_15,y_15,g_south_west,l_Klook_water_br_trans_yhcmh3/activities/hu0mikxrl6agoexiobms/%E9%9D%92%E4%B9%8B%E6%B4%9E%E7%AA%9F%E6%B5%AE%E6%BD%9B%E5%8F%8A%E6%B0%B4%E8%82%BA%E6%BD%9B%E6%B0%B4%E9%AB%94%E9%A9%97.jpg" alt="青之洞窟海域" loading="lazy">
+            <div class="photo-caption">恩納村海岸 ・ BLUE CAVE REGION</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-time">
+          <div class="tl-time-jp">午 後</div>
+          <div class="tl-time-num">14:30</div>
+        </div>
+        <div class="tl-content">
+          <div class="tl-label">SCENIC SPOT</div>
+          <h3 class="tl-title">古宇利島 / 美麗海水族館</h3>
+          <p class="tl-desc">古宇利島是一座透藍的小島，跨海大橋連接陸地。或者選擇美麗海水族館，在巨大的「黑潮之海」前看鯨鯊優雅游過。</p>
+          <div class="photo">
+            <img src="https://res.cloudinary.com/jnto/image/upload/w_750,h_503,fl_lossy,f_auto/v1648203088/okinawa/M_01250_004" alt="古宇利大橋" loading="lazy">
+            <div class="photo-caption">古宇利大橋 ・ KOURI BRIDGE</div>
+          </div>
+          <div class="photo">
+            <img src="https://image.kkday.com/v2/image/get/c_fit%2Cq_55%2Ct_webp%2Cw_960/s1.kkday.com/product_535487/20251014033758_zjU0N/jpg" alt="美麗海水族館鯨鯊" loading="lazy">
+            <div class="photo-caption">美ら海水族館 ・ CHURAUMI</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="day-section day4">
+    <div class="section-divider"><span>第 四 日</span></div>
+
+    <header class="day-header">
+      <div class="day-header-row">
+        <div class="day-num-big">DAY<strong>04</strong></div>
+        <div class="day-header-info">
+          <div class="day-date">5 月 2 日 ・ 土曜日</div>
+          <div class="day-title">中部美式風情<br>海灘耍廢一日</div>
+        </div>
+      </div>
+    </header>
+
+    <div class="timeline">
+
+      <div class="tl-item">
+        <div class="tl-time">
+          <div class="tl-time-jp">夕 ぐ れ</div>
+          <div class="tl-time-num">17:30</div>
+        </div>
+        <div class="tl-content">
+          <div class="meal-tag">DINNER ・ 晩ごはん</div>
+          <h3 class="tl-title">美國村 ・ 異國夕暮</h3>
+          <p class="tl-desc">北谷的美式風情購物區。傍晚的夕陽在西海岸落下，整個天空變成橘粉色——這是沖繩最美的時刻之一。</p>
+          <div class="photo photo-wide">
+            <img src="https://static.gltjp.com/glt/data/directory/15000/14284/20230211_182516_08cea12f_w1920.webp" alt="美國村" loading="lazy">
+            <div class="photo-caption">アメリカンビレッジ ・ AMERICAN VILLAGE</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="day-section day5">
+    <div class="section-divider"><span>第 五 日</span></div>
+
+    <header class="day-header">
+      <div class="day-header-row">
+        <div class="day-num-big">DAY<strong>05</strong></div>
+        <div class="day-header-info">
+          <div class="day-date">5 月 3 日 ・ 日曜日</div>
+          <div class="day-title">那霸市區巡禮</div>
+        </div>
+      </div>
+    </header>
+
+    <div class="timeline">
+
+      <div class="tl-item">
+        <div class="tl-time">
+          <div class="tl-time-jp">午 前</div>
+          <div class="tl-time-num">10:30</div>
+        </div>
+        <div class="tl-content">
+          <div class="tl-label">SHRINE</div>
+          <h3 class="tl-title">波上宮 ・ 沖繩總鎮守</h3>
+          <p class="tl-desc">建在懸崖上的神社，下方就是波之上海灘。朱紅色的鳥居、藍色的海，是整趟旅程最日系的一張照片。</p>
+          <div class="photo">
+            <img src="https://www.newamazing.com.tw/eweb_newamazing/japan/okinawa/images/naminoue-gu/naminoue-gu-01.jpg" alt="波上宮" loading="lazy">
+            <div class="photo-caption">波上宮 ・ NAMINOUE SHRINE</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-time">
+          <div class="tl-time-jp">午 後</div>
+          <div class="tl-time-num">14:00</div>
+        </div>
+        <div class="tl-content">
+          <div class="tl-label">MUSEUM</div>
+          <h3 class="tl-title">沖繩縣立博物館</h3>
+          <p class="tl-desc">外觀像琉球古城牆的建築，本身就是欣賞重點。常設展從史前繩文時代一路講到現代。</p>
+          <div class="photo">
+            <img src="https://oka-hvh.com/wp/wp-content/uploads/2022/10/okinawa-art.jpg" alt="沖繩縣立博物館" loading="lazy">
+            <div class="photo-caption">沖縄県立博物館 ・ MUSEUM</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="ending">
+    <div class="ending-content">
+      <div class="ending-jp">またね、おきなわ</div>
+      <h2 class="ending-title">旅 の 終 わ り</h2>
+      <p class="ending-text">
+        五天的海風、五天的家常菜、<br>
+        五天和爸爸媽媽妹妹一起的時光。<br>
+        願這份手冊陪伴我們，<br>
+        把沖繩的每一個瞬間都記得。
+      </p>
+      <div class="ending-stamp">2026 ・ 家族旅行記念</div>
+    </div>
+  </section>
+
+</div>
+
+</body>
+</html>
