@@ -627,7 +627,7 @@
       <div class="q-number">Q13</div>
       <div class="q-text">最後，有沒有什麼是你最希望這個工具解決的事？</div>
       <div class="q-sub">用自己的話說說看，這對我們非常有幫助 🙏</div>
-      <textarea class="open-input" placeholder="自由填寫…" style="min-height: 110px;"></textarea>
+      <textarea class="open-input" id="q13text" placeholder="自由填寫…" style="min-height: 110px;"></textarea>
     </div>
 
     <div class="submit-wrap">
@@ -778,7 +778,7 @@
       q10: getVal('q10'),
       q11: getVal('q11') + (q11other && q11other.value.trim() ? '｜其他：' + q11other.value.trim() : ''),
       q12: getVal('q12'),
-      q13: getTextarea(13)
+      q13: document.getElementById('q13text') ? document.getElementById('q13text').value.trim() : ''
     };
 
     fetch('https://script.google.com/macros/s/AKfycbxNc8b7nD17EJgT-ZYQQSgyuhUZegHVa_QNTj_qmVQAmbmSeznj4mXmEq6Qv9ntKY5Pew/exec', {
