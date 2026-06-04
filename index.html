@@ -405,7 +405,7 @@
   <div class="progress-track">
     <div class="progress-fill" id="progressFill"></div>
   </div>
-  <div class="progress-label" id="progressLabel">0 / 12</div>
+  <div class="progress-label" id="progressLabel">0 / 13</div>
 </div>
 
 <div class="survey-body">
@@ -511,6 +511,8 @@
           <div class="option-marker"></div><span class="option-text">建議客戶另請風水師確認</span></label>
         <label class="option-item radio"><input type="radio" name="q6" value="盡量略過">
           <div class="option-marker"></div><span class="option-text">盡量略過，不在我的服務範圍內</span></label>
+        <label class="option-item radio"><input type="radio" name="q6" value="依業主重視風水程度彈性處理">
+          <div class="option-marker"></div><span class="option-text">依業主重視風水程度，以前述三種方式彈性處理</span></label>
       </div>
     </div>
 
@@ -559,18 +561,21 @@
       <div class="q-number">Q9</div>
       <div class="q-text">以下功能中，你最希望這個工具具備哪幾項？</div>
       <div class="q-sub">請選出最重要的 3 項</div>
-      <div class="options-grid" id="q8-options">
-        <label class="option-item"><input type="checkbox" name="q9" value="上傳平面圖自動分析風水禁忌">
-          <div class="option-marker"></div><span class="option-text">上傳平面圖，自動標示風水禁忌（沖門、穿堂等）</span></label>
-        <label class="option-item"><input type="checkbox" name="q9" value="AI生成設計決策說明">
-          <div class="option-marker"></div><span class="option-text">AI 生成「設計決策說明」，幫你對客戶解釋格局邏輯</span></label>
-        <label class="option-item"><input type="checkbox" name="q9" value="風水改善建議對應設計方案">
-          <div class="option-marker"></div><span class="option-text">風水問題 → 對應的設計改善方案（附視覺說明）</span></label>
+      <div class="options-grid" id="q9-options">
+        <label class="option-item"><input type="checkbox" name="q9" value="上傳現況照片與平面圖AI評估">
+          <div class="option-marker"></div><span class="option-text">上傳現況照片與現況平面圖，AI 初步評估分析既有風水問題（如沖門、穿堂等）</span></label>
+        <label class="option-item"><input type="checkbox" name="q9" value="上傳提案配置圖AI複驗">
+          <div class="option-marker"></div><span class="option-text">上傳提案前的平面配置圖，AI 協助複驗配置是否合宜</span></label>
+        <label class="option-item"><input type="checkbox" name="q9" value="AI化解建議與替代方案">
+          <div class="option-marker"></div><span class="option-text">當風水問題無法透過空間規劃直接解決時，AI 協助設計師提出兼顧美感、機能與風水需求的化解建議與替代方案</span></label>
         <label class="option-item"><input type="checkbox" name="q9" value="客戶可自行操作的互動版本">
           <div class="option-marker"></div><span class="option-text">可分享給客戶自行操作的互動版本（提案後補充用）</span></label>
         <label class="option-item"><input type="checkbox" name="q9" value="結合八字或命盤的個人化分析">
           <div class="option-marker"></div><span class="option-text">結合業主八字 / 命盤的個人化風水分析</span></label>
+        <label class="option-item"><input type="checkbox" name="q9" value="其他">
+          <div class="option-marker"></div><span class="option-text">其他</span></label>
       </div>
+      <textarea class="open-input" placeholder="若選「其他」請說明…"></textarea>
     </div>
 
     <!-- Section E -->
@@ -578,7 +583,7 @@
 
     <div class="question-block" data-q="10">
       <div class="q-number">Q10</div>
-      <div class="q-text">你願意為這類工具付費的前提是什麼？</div>
+      <div class="q-text">希望這類工具能為你或團隊帶來什麼效益？</div>
       <div class="q-sub">可複選</div>
       <div class="options-grid">
         <label class="option-item"><input type="checkbox" name="q10" value="確實縮短提案溝通時間">
@@ -591,28 +596,37 @@
           <div class="option-marker"></div><span class="option-text">操作簡單，能融入我現有的工作流程</span></label>
         <label class="option-item"><input type="checkbox" name="q10" value="免費試用後再決定">
           <div class="option-marker"></div><span class="option-text">免費試用後才能決定</span></label>
-        <label class="option-item"><input type="checkbox" name="q10" value="不願意付費">
-          <div class="option-marker"></div><span class="option-text">不願意付費（認為這不是必要工具）</span></label>
       </div>
     </div>
 
     <div class="question-block" data-q="11">
       <div class="q-number">Q11</div>
-      <div class="q-text">如果定價為月費制，你可接受的範圍大概是？</div>
-      <div class="options-grid two-col">
-        <label class="option-item radio"><input type="radio" name="q11" value="不願意付費">
-          <div class="option-marker"></div><span class="option-text">不願意付費</span></label>
-        <label class="option-item radio"><input type="radio" name="q11" value="NT$100-300">
-          <div class="option-marker"></div><span class="option-text">NT$100–300 / 月</span></label>
-        <label class="option-item radio"><input type="radio" name="q11" value="NT$300-600">
-          <div class="option-marker"></div><span class="option-text">NT$300–600 / 月</span></label>
-        <label class="option-item radio"><input type="radio" name="q11" value="NT$600以上">
-          <div class="option-marker"></div><span class="option-text">NT$600 以上 / 月</span></label>
+      <div class="q-text">如果這個工具能有效提升工作效率，您較能接受哪種付費方式？</div>
+      <div class="options-grid">
+        <label class="option-item radio"><input type="radio" name="q11" value="免費版+進階功能付費">
+          <div class="option-marker"></div><span class="option-text">免費版 + 進階功能付費</span></label>
+        <label class="option-item radio"><input type="radio" name="q11" value="每月訂閱制">
+          <div class="option-marker"></div><span class="option-text">每月訂閱制</span></label>
+        <label class="option-item radio"><input type="radio" name="q11" value="每年訂閱制">
+          <div class="option-marker"></div><span class="option-text">每年訂閱制</span></label>
+        <label class="option-item radio"><input type="radio" name="q11" value="按使用次數付費">
+          <div class="option-marker"></div><span class="option-text">按使用次數付費（Pay-per-use）</span></label>
+        <label class="option-item radio"><input type="radio" name="q11" value="依專案付費">
+          <div class="option-marker"></div><span class="option-text">依專案付費</span></label>
+        <label class="option-item radio"><input type="radio" name="q11" value="其他">
+          <div class="option-marker"></div><span class="option-text">其他</span></label>
       </div>
+      <textarea class="open-input" id="q11other" placeholder="若選「其他」請說明…" style="display:none;"></textarea>
     </div>
 
-    <div class="question-block" data-q="12">
+    <div class="question-block" data-q="12" id="q12block" style="display:none;">
       <div class="q-number">Q12</div>
+      <div class="q-text" id="q12title"></div>
+      <div class="options-grid two-col" id="q12options"></div>
+    </div>
+
+    <div class="question-block" data-q="13">
+      <div class="q-number">Q13</div>
       <div class="q-text">最後，有沒有什麼是你最希望這個工具解決的事？</div>
       <div class="q-sub">用自己的話說說看，這對我們非常有幫助 🙏</div>
       <textarea class="open-input" placeholder="自由填寫…" style="min-height: 110px;"></textarea>
@@ -634,7 +648,51 @@
 
 <script>
   // Progress tracking
-  const totalQ = 12;
+  const totalQ = 13;
+
+  const q12Config = {
+    '每月訂閱制': {
+      title: '若此工具每月可協助您節省設計與溝通時間，您可接受的月費區間為？',
+      options: ['99 元以下', '100–299 元', '300–499 元', '500–999 元', '1,000–1,999 元', '2,000 元以上']
+    },
+    '每年訂閱制': {
+      title: '若此工具每年可協助您節省設計與溝通時間，您可接受的年費區間為？',
+      options: ['999 元以下', '1,000–2,999 元', '3,000–5,999 元', '6,000–11,999 元', '12,000 元以上']
+    },
+    '按使用次數付費': {
+      title: '若每次分析可協助完成一項專案需求，您可接受的單次價格為？',
+      options: ['10 元以下', '11–30 元', '31–50 元', '51–100 元', '101 元以上']
+    },
+    '依專案付費': {
+      title: '您可接受的單一專案費用為？',
+      options: ['100 元以下', '100–300 元', '301–500 元', '501–1,000 元', '1,000 元以上']
+    }
+  };
+
+  function renderQ12(val) {
+    const block = document.getElementById('q12block');
+    const title = document.getElementById('q12title');
+    const opts = document.getElementById('q12options');
+    const config = q12Config[val];
+    if (!config) { block.style.display = 'none'; return; }
+    title.textContent = config.title;
+    opts.innerHTML = config.options.map(o =>
+      `<label class="option-item radio"><input type="radio" name="q12" value="${o}">
+        <div class="option-marker"></div><span class="option-text">${o}</span></label>`
+    ).join('');
+    block.style.display = 'block';
+    // re-bind click for new options
+    opts.querySelectorAll('.option-item').forEach(item => {
+      item.addEventListener('click', function() {
+        const input = this.querySelector('input');
+        opts.querySelectorAll('.option-item').forEach(i => i.classList.remove('selected'));
+        input.checked = true;
+        this.classList.add('selected');
+        updateProgress();
+      });
+    });
+    updateProgress();
+  }
 
   function updateProgress() {
     let answered = 0;
@@ -650,8 +708,7 @@
     }
     const pct = Math.round((answered / totalQ) * 100);
     document.getElementById('progressFill').style.width = pct + '%';
-    document.getElementById('progressLabel').textContent = answered + ' / ' + totalQ;
-  }
+    document.getElementById('progressLabel').textContent = answered + ' / ' + totalQ;  }
 
   // Option selection
   document.querySelectorAll('.option-item').forEach(item => {
@@ -664,16 +721,20 @@
         });
         input.checked = true;
         this.classList.add('selected');
-      } else {
-        // Checkbox with max 3 for q3
-        const name = input.name;
-        if (name === 'q3') {
-          const checked = document.querySelectorAll(`input[name="q4"]:checked`);
-          if (!input.checked && checked.length >= 3) return;
+        // Q11 conditional logic
+        if (name === 'q11') {
+          const other = document.getElementById('q11other');
+          other.style.display = input.value === '其他' ? 'block' : 'none';
+          renderQ12(input.value);
         }
-        if (name === 'q8') {
+      } else {
+        const name = input.name;
+        if (name === 'q9') {
           const checked = document.querySelectorAll(`input[name="q9"]:checked`);
           if (!input.checked && checked.length >= 3) return;
+        }
+        if (name === 'q3_cases') {
+          // no limit for project type
         }
         input.checked = !input.checked;
         this.classList.toggle('selected', input.checked);
@@ -705,6 +766,7 @@
     btn.textContent = '送出中…';
     btn.disabled = true;
 
+    const q11other = document.getElementById('q11other');
     const payload = {
       q1:  getVal('q1'),
       q2:  getVal('q2'),
@@ -714,10 +776,11 @@
       q6:  getVal('q6'),
       q7:  getVal('q7'),
       q8:  getVal('q8'),
-      q9:  getVal('q9'),
+      q9:  getVal('q9') + (getTextarea(9) ? '｜其他：' + getTextarea(9) : ''),
       q10: getVal('q10'),
-      q11: getVal('q11'),
-      q12: getTextarea(12)
+      q11: getVal('q11') + (q11other && q11other.value.trim() ? '｜其他：' + q11other.value.trim() : ''),
+      q12: getVal('q12'),
+      q13: getTextarea(13)
     };
 
     fetch('https://script.google.com/macros/s/AKfycbxNc8b7nD17EJgT-ZYQQSgyuhUZegHVa_QNTj_qmVQAmbmSeznj4mXmEq6Qv9ntKY5Pew/exec', {
